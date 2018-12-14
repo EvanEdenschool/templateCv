@@ -13,22 +13,5 @@
       <h1>Prenom <span>Nom</span></h1>
       <p>Description (en 2 ligne)</p>
     </div>
-
-    <style type="text/css">
-      .firstStrate {
-        display: flex;
-        text-align: center;
-        align-items: center;
-        flex-direction: column;
-      }
-      .roundedImage{
-          overflow:hidden;
-          -webkit-border-radius:50px;
-          -moz-border-radius:50px;
-          border-radius:50px;
-          width:90px;
-          height:90px;
-      }
-    </style>
   </body>
 </html>

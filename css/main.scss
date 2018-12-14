@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Poppins Medium';
+  color: white;
+  font-size: 3em;
+}
+
+h2 {
+  color: black;
+  font-family: 'Poppins Medium';
+  font-size: 2em;
+}
+
+
+h3 {
+  font-family: 'Poppins Medium';
+  color: grey;
+  font-size: 1.5em;
+}
+
+
+h4 {
+  font-family: 'Poppins Light';
+  font-size: 1em;
+  color: black;
+}
+
+
+p {
+  font-family: 'Poppins ExtraLight';
+  font-size: 0.8em;
+}
+
+
+span {
+  font-family: 'Poppins ExtraLight';
+  color: white;
+}
+
+
+@import 'accueil.scss';
+@import 'fonts.scss';
