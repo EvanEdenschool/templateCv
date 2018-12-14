@@ -1,1 +1,4 @@
-<?php?>
+<?php
+  class Cv {
+  }
+?>
