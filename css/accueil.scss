@@ -1,0 +1,47 @@
+// main : main.scss
+
+.firstStrate {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: contain;
+  height: 100vh;
+  h1 {
+    margin: 0;
+  }
+  span {
+    margin: 0;
+    font-weight: bolder;
+  }
+  .containerImage {
+    margin-top: 15vh;
+    height: 45vh;
+    width: 45vh;
+
+    .roundedImage{
+        border-radius:50%;
+        height: 100%;
+        width: 100%;
+        border: 3px solid black;
+    }
+  }
+  ul.description {
+    max-width: 50vw;
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    li {
+      width: 50%;
+      margin-bottom: 1.5vh;
+      color: white;
+      font-weight: bold;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
