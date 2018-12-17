@@ -1,0 +1,16 @@
+// main : main.scss
+
+.firstStrate {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+.roundedImage{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:90px;
+    height:90px;
+}
