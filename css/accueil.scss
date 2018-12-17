@@ -5,6 +5,7 @@
   text-align: center;
   align-items: center;
   flex-direction: column;
+<<<<<<< HEAD
   background-size: contain;
   height: 100vh;
   h1 {
@@ -53,4 +54,14 @@
       }
     }
   }
+=======
+}
+.roundedImage{
+    overflow:hidden;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
+    width:90px;
+    height:90px;
+>>>>>>> 75a27a5cb02ccfe60963509f36e524b81f695f86
 }
