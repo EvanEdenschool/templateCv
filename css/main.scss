@@ -42,5 +42,24 @@ span {
 }
 
 
+a {
+  text-decoration: none;
+  font-family: 'Poppins Medium';
+  font-size: 2em;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  padding: 2.5vh;
+  cursor: pointer;
+  border-radius: 50px;
+}a:hover{
+  background-color: black;
+  color: white;
+  border-color: white;
+  transition: 1s;
+}
+
 @import 'accueil.scss';
 @import 'fonts.scss';
+@import 'leftside.scss';

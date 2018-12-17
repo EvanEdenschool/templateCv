@@ -4,7 +4,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/cv.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
     <title>Cv template</title>
   </head>
   <body>

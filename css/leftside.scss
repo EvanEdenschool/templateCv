@@ -1,0 +1,35 @@
+// main : main.scss
+
+.ButtonList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 5vw;
+  padding: 0;
+  > .ButtonMARGE1 {
+    margin-top: 2vh;
+  }
+  > li {
+    > p {
+      text-align: center;
+    }
+  }
+  .SkillsList {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    list-style-type: none;
+}
+  .IconList {
+    list-style-type: none;
+    display: flex;
+    > li {
+      padding-top: 2vh;
+      margin: 1vh;
+      font-size: 5em;
+      cursor: pointer;
+    }li:hover{
+      color: darkblue;
+    }
+  }
+}
