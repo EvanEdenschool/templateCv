@@ -47,24 +47,51 @@
         </ul>
       </div>
       <div class="RightSide">
-        <a href="#">WORK EXPERIENCE</a>
         <ul class="RightList">
+          <li class="buttonContainer"><a href="#">WORK EXPERIENCE</a></li>
           <li><h3>PEG</h3></li>
           <li><h4>Marketing Specialist</h4></li>
           <li><p>Evan est un petit enculer de nain,
             Evan est un petit enculer de nain
             Evan est un petit enculer de nain
             Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain,
             Evan est un petit enculer de nain,</p></li>
-
-            <li><h3>PEG</h3></li>
-            <li><h4>Marketing Specialist</h4></li>
-            <li><p>Evan est un petit enculer de nain,
-              Evan est un petit enculer de nain
-              Evan est un petit enculer de nain
-              Evan est un petit enculer de nain,
-              Evan est un petit enculer de nain,</p></li>
         </ul>
+
+        <ul class="RightList">
+          <li><h3>BACKGROUND MEDIA</h3></li>
+          <li><h4>Digital Marketing Specialist</h4></li>
+          <li><p>Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain,</p></li>
+            <li class="buttonContainer"><a href="#">EDUCATION</a></li>
+        </ul>
+      <div class="FlexLastList">
+        <ul class="LastList">
+           <li><h4>Collage</h4></li>
+           <li><p>Evan est un petit enculer de nain,
+           Evan est un petit enculer de nain,
+           Evan est un petit enculer de nain,</p></li>
+         </ul>
+        <ul class="LastList">
+           <li><h4>Specialization</h4></li>
+           <li><p>Evan est un petit enculer de nain,
+           Evan est un petit enculer de nain,
+           Evan est un petit enculer de nain,</p></li>
+        </ul>
+        </div>
       </div>
     </section>
   </body>
