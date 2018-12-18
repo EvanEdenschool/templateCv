@@ -7,7 +7,8 @@ try {
 catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
 }
-$reponse = $bdd->query('SELECT prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image FROM user');
+$id = $_GET['id'];
+$reponse = $bdd->query("SELECT id, prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image FROM user WHERE id = '$id'");
 $userdata = $reponse->fetch();
 ?>
 
@@ -35,5 +36,92 @@ $userdata = $reponse->fetch();
         <li><i class="fab fa-linkedin"></i><p><?php echo $userdata['linkedin'];?></p></li>
       </ul>
     </div>
+		<section class="AllSides">
+			<div class="LeftSide">
+			<ul class="ButtonList">
+				<a href="#">ABOUT ME</a>
+				<li><p>johann est un petit enculer de nain,
+					johann est un petit enculer de nain
+					johann est un petit enculer de nain
+					johann est un petit enculer de nain,
+					johann est un petit enculer de nain,
+					johann est un petit enculer de nain,</p></li>
+				<a href="#" class="ButtonMARGE1">SKILLS</a>
+				<ul class="SkillsList">
+					<li><h4>SKILL #1</h4><progress max="100" value="70"></progress></li>
+					<li><h4>SKILL #2</h4><progress max="100" value="30"></progress></li>
+					<li><h4>SKILL #3</h4><progress max="100" value="50"></progress></li>
+					<li><h4>SKILL #4</h4><progress max="100" value="30"></progress></li>
+				</ul>
+				<a href="#" class="ButtonMARGE">PERSONAL SKILLS</a>
+				<div class="listIconSkills">
+						<ul class="IconList">
+							<li>
+								<i class="fas fa-heart"></i>
+								<hr />
+								<h4>Skill #1</h4>
+							</li>
+							<li>
+								<i class="far fa-hand-paper"></i>
+								<hr />
+								<h4>Skill #2</h4>
+							</li>
+							<li>
+								<i class="fas fa-chart-bar"></i>
+								<hr />
+								<h4>Skill #3</h4>
+							</li>
+						</ul>
+					</div>
+				</ul>
+			</div>
+			<div class="RightSide">
+				<ul class="RightList">
+					<li class="buttonContainer"><a href="#">WORK EXPERIENCE</a></li>
+					<li><h3>PEG</h3></li>
+					<li><h4>Marketing Specialist</h4></li>
+					<li><p>johann est un petit enculer de nain,
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain,</p></li>
+				</ul>
+
+				<ul class="RightList">
+					<li><h3>BACKGROUND MEDIA</h3></li>
+					<li><h4>Digital Marketing Specialist</h4></li>
+					<li><p>johann est un petit enculer de nain,
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain
+						johann est un petit enculer de nain,
+						johann est un petit enculer de nain,</p></li>
+						<li class="buttonContainer"><a href="#">EDUCATION</a></li>
+				</ul>
+			<div class="FlexLastList">
+				<ul class="LastList">
+					 <li><h4>Collage</h4></li>
+					 <li><p>johann est un petit enculer de nain,
+					 johann est un petit enculer de nain,
+					 johann est un petit enculer de nain,</p></li>
+				 </ul>
+				<ul class="LastList">
+					 <li><h4>Specialization</h4></li>
+					 <li><p>johann est un petit enculer de nain,
+					 johann est un petit enculer de nain,
+					 johann est un petit enculer de nain,</p></li>
+				</ul>
+				</div>
+			</div>
+		</section>
   </body>
 </html>

@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
 
   if (!empty($_POST['prenom']) && !empty($_POST['nom']) && !empty($_POST['metier']) && !empty($_POST['adresse']) && !empty($_POST['numero']) && !empty($_POST['adresse_mail']) && !empty($_POST['linkedin'])) {
     // Insertion
-    $req = $bdd->prepare('INSERT INTO user(prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image, id) VALUES(:prenom, :nom, :metier, :adresse, :numero, :adresse_mail, :linkedin, :background, :your_image, id)');
+    $req = $bdd->prepare('INSERT INTO user(prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image) VALUES(:prenom, :nom, :metier, :adresse, :numero, :adresse_mail, :linkedin, :background, :your_image)');
     $req->execute(array(
         'background' => $backgroundLink,
         'your_image' => $imageLink,
@@ -46,9 +46,10 @@ if (isset($_POST['submit'])) {
         'numero' => $_POST['numero'],
         'adresse_mail' => $_POST['adresse_mail'],
         'linkedin' => $_POST['linkedin']));
-        
 
-    header("Location: Cv.php");
+				$id = $bdd->lastInsertId();
+
+    header("Location: Cv.php?id=$id");
   } else {
     echo "Erreur lors de l'enregistrement de vos données";
   }
@@ -63,15 +64,15 @@ if (isset($_POST['submit'])) {
   </head>
   <body>
       <form class="formAdmin" method="post" enctype="multipart/form-data">
-        <label>Background :</label><input type="file" name="background" value="" placeholder="monimage.extension (jpg, png)"/>
-        <label>Image Ronde :</label><input type="file" name="your_image" value="" placeholder="monimage.extension (jpg, png)"/>
-        <label>Prénom :</label><input type="text" name="prenom" value=""/>
-        <labeL>Nom :</label><input type="text" name="nom" value=""/>
-        <label>Addresse</label><input type="text" name="adresse" value="" placeholder="3 rue du bec"/>
-        <label>Adresse Mail</label><input type="Mail" name="adresse_mail" value="" placeholder="exemple@domaine.fr">
-        <label>Numéro :</label><input type="text" name="numero" value="Numéro" placeholder="ex:0605030203"/>
-        <label>Métier :</label><input type="text" name="metier" value=""/>
-        <label>Linkedin</label><input type="text" name="linkedin" value="" placeholder="linkedin"/>
+        <label>Background :</label><input type="file" name="background" value="" placeholder="monimage.extension (jpg, png)"/><br/>
+        <label>Image :</label><input type="file" name="your_image" value="" placeholder="monimage.extension (jpg, png)"/><br/>
+        <label>Prénom :</label><input type="text" name="prenom" value=""/><br/>
+        <labeL>Nom :</label><input type="text" name="nom" value=""/><br/>
+        <label>Addresse</label><input type="text" name="adresse" value="" placeholder="3 rue du bec"/><br/>
+        <label>Adresse Mail</label><input type="Mail" name="adresse_mail" value="" placeholder="exemple@domaine.fr"><br/>
+        <label>Numéro :</label><input type="text" name="numero" value="Numéro" placeholder="ex:0605030203"/><br/>
+        <label>Métier :</label><input type="text" name="metier" value=""/><br/>
+        <label>Linkedin</label><input type="text" name="linkedin" value="" placeholder="linkedin"/><br/>
         <input type="submit" name="submit"/>
       </form>
   </body>
