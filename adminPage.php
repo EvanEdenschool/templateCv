@@ -46,6 +46,7 @@ if (isset($_POST['submit'])) {
         'numero' => $_POST['numero'],
         'adresse_mail' => $_POST['adresse_mail'],
         'linkedin' => $_POST['linkedin']));
+        
 
     header("Location: Cv.php");
   } else {

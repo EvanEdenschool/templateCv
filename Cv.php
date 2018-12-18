@@ -10,6 +10,7 @@ catch (Exception $e) {
 $reponse = $bdd->query('SELECT prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image FROM user');
 $userdata = $reponse->fetch();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
