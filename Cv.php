@@ -1,13 +1,14 @@
 <?php
-  $_background = 'background.jpg';
-  $_rounded_image = 'pierre.jpg';
-  $_nom = 'Nom';
-  $_prenom = 'Prenom';
-  $_metier = 'Developpeur Web';
-  $_adresse = '3 place du bec';
-  $_mail_adresse = 'bec.kakic@free.fr';
-  $_numero = '067898765';
-  $_linkedin = 'Votre Linkedin';
+try {
+	$bdd = new PDO('mysql:host=localhost;dbname=Cv;charset=utf8', 'root', 'root', array(
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+  ));
+}
+catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+}
+$reponse = $bdd->query('SELECT prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image FROM user');
+$userdata = $reponse->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +22,17 @@
   </head>
   <body>
     <div class="firstStrate"
-        style="background-image:url('./img/<?php echo $_background;?>')">
+        style="background-image:url('./uploads/<?php echo $userdata['background'];?>')">
       <div class="containerImage">
-        <img class="roundedImage" src="./img/<?php echo $_rounded_image;?>" alt="image qui montre la tête"/>
+        <img class="roundedImage" src="./uploads/<?php echo $userdata['your_image'];?>" alt="image qui montre la tête"/>
       </div>
-      <h1><?php echo $_prenom . '<span> ' . $_nom  .'</span>';?> </h1>
-      <span><?php echo $_metier;?></span>
+      <h1><?php echo $userdata['prenom'] . '<span> ' . $userdata['nom']  .'</span>';?> </h1>
+      <span><?php echo $userdata['metier'];?></span>
       <ul class="description">
-        <li><i class="fas fa-map-marker-alt"></i><p><?php echo $_adresse;?></p></li>
-        <li><i class="fas fa-envelope"></i><p><?php echo $_mail_adresse;?></p></li>
-        <li><i class="fas fa-mobile-alt"></i><p><?php echo $_numero;?></p></li>
-        <li><i class="fab fa-linkedin"></i><p><?php echo $_linkedin;?></p></li>
+        <li><i class="fas fa-map-marker-alt"></i><p><?php echo $userdata['adresse'];?></p></li>
+        <li><i class="fas fa-envelope"></i><p><?php echo $userdata['adresse_mail'];?></p></li>
+        <li><i class="fas fa-mobile-alt"></i><p><?php echo $userdata['numero'];?></p></li>
+        <li><i class="fab fa-linkedin"></i><p><?php echo $userdata['linkedin'];?></p></li>
       </ul>
     </div>
   </body>
