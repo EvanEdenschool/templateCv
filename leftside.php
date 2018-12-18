@@ -7,7 +7,8 @@
     <title></title>
   </head>
   <body>
-    <div>
+    <section class="AllSides">
+      <div class="LeftSide">
       <ul class="ButtonList">
         <a href="#">ABOUT ME</a>
         <li><p>Evan est un petit enculer de nain,
@@ -18,30 +19,53 @@
           Evan est un petit enculer de nain,</p></li>
         <a href="#" class="ButtonMARGE1">SKILLS</a>
         <ul class="SkillsList">
-          <li>SKILL #1</li>
-          <li>SKILL #2</li>
-          <li>SKILL #3</li>
-          <li>SKILL #4</li>
+          <li><h4>SKILL #1</h4><progress max="100" value="70"></progress></li>
+          <li><h4>SKILL #2</h4><progress max="100" value="30"></progress></li>
+          <li><h4>SKILL #3</h4><progress max="100" value="50"></progress></li>
+          <li><h4>SKILL #4</h4><progress max="100" value="30"></progress></li>
         </ul>
         <a href="#" class="ButtonMARGE">PERSONAL SKILLS</a>
         <div class="listIconSkills">
             <ul class="IconList">
-              <li><i class="fas fa-heart"></i></i></li>
-              <li><i class="far fa-hand-paper"></i></li>
-              <li><i class="fas fa-chart-bar"></i></li>
+              <li>
+                <i class="fas fa-heart"></i>
+                <hr />
+                <h4>Skill #1</h4>
+              </li>
+              <li>
+                <i class="far fa-hand-paper"></i>
+                <hr />
+                <h4>Skill #2</h4>
+              </li>
+              <li>
+                <i class="fas fa-chart-bar"></i>
+                <hr />
+                <h4>Skill #3</h4>
+              </li>
             </ul>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-        </div>
-      </ul>
-    </div>
+          </div>
+        </ul>
+      </div>
+      <div class="RightSide">
+        <a href="#">WORK EXPERIENCE</a>
+        <ul class="RightList">
+          <li><h3>PEG</h3></li>
+          <li><h4>Marketing Specialist</h4></li>
+          <li><p>Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain
+            Evan est un petit enculer de nain,
+            Evan est un petit enculer de nain,</p></li>
+
+            <li><h3>PEG</h3></li>
+            <li><h4>Marketing Specialist</h4></li>
+            <li><p>Evan est un petit enculer de nain,
+              Evan est un petit enculer de nain
+              Evan est un petit enculer de nain
+              Evan est un petit enculer de nain,
+              Evan est un petit enculer de nain,</p></li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>

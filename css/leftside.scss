@@ -1,35 +1,79 @@
 // main : main.scss
 
-.ButtonList {
-  list-style-type: none;
+.AllSides {
   display: flex;
-  flex-direction: column;
-  width: 25%;
-  margin-left: 5vw;
-  padding: 0;
-  > .ButtonMARGE1 {
-    margin-top: 2vh;
-  }
-  > li {
-    > p {
-      text-align: center;
+  .RightSide {
+    padding-top: 5vh;
+    > a {
+      margin-left: 10vw;
+    }
+    .RightList {
+      margin-top: 2vh;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
     }
   }
-  .SkillsList {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    list-style-type: none;
+ >*{
+   flex: 1;
+ }
 }
-  .IconList {
+
+.LeftSide {
+  border-right: 1px solid black;
+}
+
+  .ButtonList {
     list-style-type: none;
     display: flex;
-    > li {
-      padding-top: 2vh;
-      margin: 1vh;
-      font-size: 5em;
-      cursor: pointer;
-    }li:hover{
-      color: darkblue;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 10vw;
+    padding: 0;
+    > .ButtonMARGE1 {
+      margin-top: 2vh;
     }
-  }
+    > li {
+      > p {
+        text-align: center;
+      }
+    }
+    .SkillsList {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+      list-style-type: none;
+      h4 {
+        font-size: 1rem;
+      }
+    }
+    .listIconSkills {
+      margin-top: 2vh;
+      .IconList {
+        list-style-type: none;
+        display: flex;
+          > li {
+            padding-top: 2vh;
+            margin: 1vh;
+            text-align: center;
+            font-size: 5em;
+            cursor: pointer;
+              }
+
+              li:hover{
+              color: darkgrey;
+              transition: 1s;
+            }
+
+            hr {
+              margin: 0;
+            }
+            h4 {
+              font-size: 1rem;
+            }
+          }
+      }
+      > hr.HrVertical {
+        transform: rotate(90deg);
+        width: 100px;
+      }
 }
