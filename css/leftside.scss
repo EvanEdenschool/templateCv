@@ -3,15 +3,37 @@
 .AllSides {
   display: flex;
   .RightSide {
-    padding-top: 5vh;
-    > a {
-      margin-left: 10vw;
-    }
+    padding-top: 2.5vh;
     .RightList {
-      margin-top: 2vh;
       list-style-type: none;
       display: flex;
+      padding: 0;
       flex-direction: column;
+        li {
+          padding-left: 2.5vw;
+          p {
+        width: 80%;
+        padding-bottom: 10vh;
+        }
+      }
+      li.buttonContainer {
+        padding: 0;
+        align-self: center;
+      }
+    }
+    .FlexLastList {
+      display: flex;
+      .LastList {
+        padding-top: 3vh;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        li {
+          p {
+            width: 75%;
+          }
+        }
+      }
     }
   }
  >*{
