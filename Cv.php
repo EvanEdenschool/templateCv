@@ -8,8 +8,15 @@ catch (Exception $e) {
         die('Erreur : ' . $e->getMessage());
 }
 $id = $_GET['id'];
-$reponse = $bdd->query("SELECT id, prenom, nom, metier, adresse, numero, adresse_mail, linkedin, background, your_image FROM user WHERE id = '$id'");
+$reponse = $bdd->query("SELECT * FROM user WHERE id = '$id'");
 $userdata = $reponse->fetch();
+
+$competences = $bdd->prepare("SELECT * FROM competence WHERE user_id = $id ");
+$competences->execute();
+
+function showProgress ($nom_competence, $niveau_competence) {
+	echo "<li><h4>$nom_competence</h4><progress max='100' value='$niveau_competence'></progress></li>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +38,7 @@ $userdata = $reponse->fetch();
       <span><?php echo $userdata['metier'];?></span>
       <ul class="description">
         <li><i class="fas fa-map-marker-alt"></i><p><?php echo $userdata['adresse'];?></p></li>
-        <li><i class="fas fa-envelope"></i><p><?php echo $userdata['adresse_mail'];?></p></li>
+        <li><i class="fas fa-enveope"></i><p><?php echo $userdata['adresse_mail'];?></p></li>
         <li><i class="fas fa-mobile-alt"></i><p><?php echo $userdata['numero'];?></p></li>
         <li><i class="fab fa-linkedin"></i><p><?php echo $userdata['linkedin'];?></p></li>
       </ul>
@@ -39,19 +46,15 @@ $userdata = $reponse->fetch();
 		<section class="AllSides">
 			<div class="LeftSide">
 			<ul class="ButtonList">
-				<a href="#">ABOUT ME</a>
-				<li><p>johann est un petit enculer de nain,
-					johann est un petit enculer de nain
-					johann est un petit enculer de nain
-					johann est un petit enculer de nain,
-					johann est un petit enculer de nain,
-					johann est un petit enculer de nain,</p></li>
+				<a href="#">À propos de moi</a>
+				<li><p><?php echo $userdata['description'];?></p></li>
 				<a href="#" class="ButtonMARGE1">SKILLS</a>
 				<ul class="SkillsList">
-					<li><h4>SKILL #1</h4><progress max="100" value="70"></progress></li>
-					<li><h4>SKILL #2</h4><progress max="100" value="30"></progress></li>
-					<li><h4>SKILL #3</h4><progress max="100" value="50"></progress></li>
-					<li><h4>SKILL #4</h4><progress max="100" value="30"></progress></li>
+					<?php
+					while($competence = $competences->fetch()) {
+						showProgress($competence["nom_competence"], $competence["niveau_competence"]);
+					}
+					?>
 				</ul>
 				<a href="#" class="ButtonMARGE">PERSONAL SKILLS</a>
 				<div class="listIconSkills">
